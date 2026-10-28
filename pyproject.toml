@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bugsweep"
+version = "1.0.0"
+description = "Flag hobby Wi-Fi dev boards (ESP32, Raspberry Pi...) on networks you own."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ephrim Bazile" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+bugsweep = "bugsweep.cli:main"
+
+[tool.setuptools]
+packages = ["bugsweep"]
+
+[tool.setuptools.package-data]
+bugsweep = ["data/*.csv"]
